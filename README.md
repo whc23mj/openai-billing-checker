@@ -8,6 +8,8 @@ OpenAI API余额查询(批量)
 2、支持多个 KEY 查询，自动提取 KEY 并批量查询
 
 3、支持反向代理查询，让你的查询更安心
+![20230509180207](https://github.com/whc23mj/openai-billing/assets/2191887/099de586-ff65-47f6-b8b4-86f420f726ab)
+![20230509180751](https://github.com/whc23mj/openai-billing/assets/2191887/cb9570ed-c448-4c2d-bf3d-e89a724d3e6b)
 
 ### 反向代理搭建
 1、注册并登录 Cloudflare
