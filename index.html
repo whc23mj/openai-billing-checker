@@ -17,7 +17,7 @@
             height: 24px;
             animation: spin 2s linear infinite;
             display: none;
-            margin-left: 20px;
+            margin: 20px;
         }
         
       table {
@@ -361,6 +361,9 @@ button[type="submit"]:focus {
       </thead>
       <tbody></tbody>
     </table>
+  <footer style="text-align: center; margin-top: 20px;">
+    <a href="https://github.com/whc23mj/openai-billing" style="color: white;">前往 Github 查看源码或独立部署</a>
+  </footer>
 </div>
 
 <script>
@@ -444,7 +447,7 @@ button[type="submit"]:focus {
         } else {
           apiUrl = apiUrlSelect.value;
         }
-
+        console.log(`ApiUrl: https://${apiUrl}`);
         let apiKeys = apiKeyInput.value.trim().split("\n");
 
         let tableBody = document.querySelector("#result-table tbody");
@@ -675,7 +678,7 @@ async function checkBilling(apiKey) {
     console.log(`Total Amount: ${totalAmount.toFixed(2)}`);
     console.log(`Used: ${totalUsage.toFixed(2)}`);
     console.log(`Remaining: ${remaining.toFixed(2)}`);
-    console.log(`ApiUrl: ${apiUrlSelect.value}`);
+    //console.log(`ApiUrl: ${apiUrlSelect.value}`);
 
     return [totalAmount, totalUsage, remaining, startDateString, endDateString];
   } catch (error) {
