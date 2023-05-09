@@ -32,7 +32,7 @@
         margin-bottom: 20px;
       }
       textarea#api-key-input {
-        width: 560px;
+        width: 500px;
         font-size: 16px;
         padding: 10px;
         margin-right: 10px;
@@ -43,17 +43,18 @@
       }
       select#api-url-select,
       input#custom-url-input {
-        width: 300px;
+        width: 100%;
         height: 50px;
         font-size: 16px;
         background-color: #212121;
         border-radius: 5px;
         color: #ffffff;
         border: none;
-        margin-right: 10px;
       }
       input#custom-url-input {
         display: none;
+        width: 85%;
+        height: 25px;
       }
       button {
         height: 50px;
@@ -316,14 +317,19 @@ button[type="submit"]:focus {
   <body>
 <div class="content">
 <h1 class="text-3xl font-semibold text-center mb-8 text-gradient">OpenAI API余额查询(批量)</h1>
+<p style="color:red;text-align:center;">* 本站不保存 KEY 信息，查询后请自行保存</p>
     <form>
 <label for="api_key" class="w-28 mr-4 text-gradient">API密钥:</label>
-      <textarea id="api-key-input" class="form-control" placeholder="每行一个秘钥"></textarea>
-      <div style="display: none;">
+      <textarea id="api-key-input" class="form-control" placeholder="每行一个秘钥，必须包含 sk-"></textarea>
+      <div style="width:200px; margin-right: 10px;">
         <select id="api-url-select">
-          <option value="https://i.*.ltd">【反向代理接口】</option>
-          <option value="https://api.openai.com">【官方查询接口】</option>
+          <option value="https://api.openai.com">【OpenAI 官方查询接口】</option>
+          <option value="https://api.askgptai.tech">【CloudFlare 反代接口】</option>
+          <option value="https://vercel.askopenai.tech">【Vercel 反代接口】</option>
+          <option value="custom">自定义反代接口: https://...</option>
         </select>
+          <!-- 自定义API链接输入框 -->
+          <input type="text" id="custom-url-input" placeholder="输入自定义API" />
       </div>
       <button type="button" style="display:inline-block; width: 100px;" onclick="sendRequest()">查询</button>
     </form>
@@ -651,6 +657,7 @@ async function checkBilling(apiKey) {
     console.log(`Total Amount: ${totalAmount.toFixed(2)}`);
     console.log(`Used: ${totalUsage.toFixed(2)}`);
     console.log(`Remaining: ${remaining.toFixed(2)}`);
+    //console.log(`ApiUrl: ${apiKeyInput.value}`);
 
     return [totalAmount, totalUsage, remaining, startDateString, endDateString];
   } catch (error) {
