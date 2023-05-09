@@ -5,7 +5,21 @@
     <meta charset="UTF-8" />
     <title>OpenAI API-KEY 信息查询</title>
     <style>
-
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .loader {
+            border: 2px solid #f3f3f3;
+            border-top: 2px solid #3498db;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            animation: spin 2s linear infinite;
+            display: none;
+            margin-left: 20px;
+        }
+        
       table {
         margin: auto;
         border-collapse: collapse;
@@ -319,7 +333,7 @@ button[type="submit"]:focus {
 <h1 class="text-3xl font-semibold text-center mb-8 text-gradient">OpenAI API余额查询(批量)</h1>
 <p style="color:red;text-align:center;">* 本站不保存 KEY 信息，查询后请自行保存</p>
     <form>
-<label for="api_key" class="w-28 mr-4 text-gradient">API密钥:</label>
+      <label for="api_key" class="w-28 mr-4 text-gradient">API密钥:</label>
       <textarea id="api-key-input" class="form-control" placeholder="每行一个秘钥，必须包含 sk-"></textarea>
       <div style="width:200px; margin-right: 10px;">
         <select id="api-url-select">
@@ -332,6 +346,7 @@ button[type="submit"]:focus {
           <input type="text" id="custom-url-input" placeholder="输入自定义API" />
       </div>
       <button type="button" style="display:inline-block; width: 100px;" onclick="sendRequest()">查询</button>
+      <div id="loader" class="loader ml-4" style="display:none;"></div>
     </form>
     <table id="result-table">
       <thead>
@@ -441,7 +456,7 @@ button[type="submit"]:focus {
             continue;
           }
           queriedApiKeys.push(apiKey);
-
+          showLoader();
           checkBilling(apiKey).then((data) => {
             // update table with data
             let row = document.createElement("tr");
@@ -494,6 +509,8 @@ button[type="submit"]:focus {
             if (i === apiKeys.length - 1) {
               queriedApiKeys = [];
             }
+            
+            hideLoader();
           }).catch((error) => {
             console.error(error);
             // update table with error message
@@ -518,6 +535,7 @@ button[type="submit"]:focus {
             if (i === apiKeys.length - 1) {
               queriedApiKeys = [];
             }
+            hideLoader();
           });
         }
       }
@@ -579,7 +597,7 @@ function displayResult(data) {
 }
 
 function checkOpenAICredit() {
-    var apiKey = document.getElementById("api_key").value;
+    var apiKey = document.getElementById("api-key-input").value;
 
     if (!apiKey.startsWith("sk-")) {
         alert("无效的API密钥，请检查您的API密钥是否正确。");
@@ -657,7 +675,7 @@ async function checkBilling(apiKey) {
     console.log(`Total Amount: ${totalAmount.toFixed(2)}`);
     console.log(`Used: ${totalUsage.toFixed(2)}`);
     console.log(`Remaining: ${remaining.toFixed(2)}`);
-    //console.log(`ApiUrl: ${apiKeyInput.value}`);
+    console.log(`ApiUrl: ${apiUrlSelect.value}`);
 
     return [totalAmount, totalUsage, remaining, startDateString, endDateString];
   } catch (error) {
