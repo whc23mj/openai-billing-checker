@@ -443,11 +443,13 @@ button[type="submit"]:focus {
             return;
           } else {
             apiUrl = customUrlInput.value.trim();
+            console.log(`ApiUrl: https://${apiUrl}`);
           }
         } else {
           apiUrl = apiUrlSelect.value;
+          console.log(`ApiUrl: ${apiUrl}`);
         }
-        console.log(`ApiUrl: https://${apiUrl}`);
+        
         let apiKeys = apiKeyInput.value.trim().split("\n");
 
         let tableBody = document.querySelector("#result-table tbody");
