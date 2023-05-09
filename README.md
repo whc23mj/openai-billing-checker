@@ -7,5 +7,13 @@ OpenAI API余额查询(批量)
 
 2、支持多个 KEY 查询，自动提取 KEY 并批量查询
 
-![20230509161449](https://user-images.githubusercontent.com/2191887/237037898-ee9339ce-717b-4fb6-99d5-5ab5a2f94de0.png)
-![20230509161536](https://user-images.githubusercontent.com/2191887/237037933-d35d38b6-01d9-4eb4-9fff-153d6e827e2a.png)
+3、支持反向代理查询，让你的查询更安心
+
+### 反向代理搭建
+注册并登录 Cloudflare
+
+点击 Workers，Create a Service，选择HTTP Router
+
+创建后点击快速编辑按钮，将项目中 cloudflare.worker.js 中的代码复制下来，粘贴到编辑区域，保存并部署即可。
+
+获取反向代理的链接，或者使用自己的 domain 作为反向代理
