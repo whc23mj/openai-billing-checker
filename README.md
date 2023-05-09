@@ -10,7 +10,7 @@ OpenAI API余额查询(批量)
 3、支持反向代理查询，让你的查询更安心
 
 ### 反向代理搭建
-注册并登录 Cloudflare
+* 注册并登录 Cloudflare
 
 点击 Workers，Create a Service，选择HTTP Router
 
