@@ -1,6 +1,6 @@
 # openai-billing-checker
 OpenAI API Billing Checker(Batch)
-Useing the apikey to query the balance of the openai billing, which can query a key worth $120.
+Using the apikey to query the balance of the openai billing, which can query a key worth $120.
 
 #### Explanation
 1、This is a pure open-source project that uses JavaScript scripts within HTML to request content. It will not collect any data.
