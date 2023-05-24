@@ -1,10 +1,10 @@
 <!DOCTYPE html>
+
 <html>
   <head>
     <meta charset="UTF-8" />
     <title>OpenAI API-KEY 信息查询</title>
     <link rel="icon" href="openai.ico"/>
-    <script defer src="/_vercel/insights/script.js"></script>
     <style>
         @keyframes spin {
             0% { transform: rotate(0deg); }
@@ -363,7 +363,8 @@ button[type="submit"]:focus {
       <tbody></tbody>
     </table>
   <footer style="text-align: center; margin-top: 20px;">
-    <a href="https://github.com/whc23mj/openai-billing-checker" style="color: white;" target="_blank">前往 Github 查看源码</a>
+    <a href="en.html" style="color: white;" target="_self">[English]</a>
+    <a href="https://github.com/whc23mj/openai-billing-checker" style="color: white;" target="_blank">[前往 Github 查看源码]</a>
   </footer>
 </div>
 
@@ -681,6 +682,7 @@ async function checkBilling(apiKey) {
     console.log(`Total Amount: ${totalAmount.toFixed(2)}`);
     console.log(`Used: ${totalUsage.toFixed(2)}`);
     console.log(`Remaining: ${remaining.toFixed(2)}`);
+    console.log(`Plan: ${subscriptionData.plan.title}`);
     //console.log(`--------------------`);
 
     return [totalAmount, totalUsage, remaining, startDateString, endDateString];
