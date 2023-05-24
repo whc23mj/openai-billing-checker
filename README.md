@@ -1,5 +1,5 @@
 # openai-billing-checker
-OpenAI API Billing Checker(Batch)
+OpenAI API Billing Checker(Batch)【中文】
 Useing the apikey to query the balance of the openai billing, which can query a key worth $120.
 
 #### Explanation
@@ -8,8 +8,9 @@ Useing the apikey to query the balance of the openai billing, which can query a 
 2、Support multiple KEY queries, automatically extract KEY and query in batches.
 
 3、Supports reverse proxy queries, making your queries more secure.
-![20230509180207](https://github.com/whc23mj/openai-billing/assets/2191887/099de586-ff65-47f6-b8b4-86f420f726ab)
-![20230509180751](https://github.com/whc23mj/openai-billing/assets/2191887/cb9570ed-c448-4c2d-bf3d-e89a724d3e6b)
+![20230524093349](https://github.com/whc23mj/openai-billing-checker/assets/2191887/e1f81f09-0f77-4cbe-bfcf-d133321763ef)
+![20230524093454](https://github.com/whc23mj/openai-billing-checker/assets/2191887/ce175ee1-491e-4f68-8cc7-a9ca6b5f500a)
+
 
 ### Reverse Proxy Setup
 1、Register and login to Cloudflare.
