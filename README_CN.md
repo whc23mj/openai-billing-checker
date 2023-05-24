@@ -1,4 +1,4 @@
-# openai-billing-checker
+# openai-billing-checker（[简体中文](./README.md)）
 OpenAI API余额查询(批量)
 使用 apikey 查询 openai apikey 余额，可查询 $120 的key
 
