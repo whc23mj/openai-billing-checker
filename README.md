@@ -1,5 +1,5 @@
 # openai-billing-checker
-OpenAI API Billing Checker(Batch)【中文】
+OpenAI API Billing Checker(Batch)
 Useing the apikey to query the balance of the openai billing, which can query a key worth $120.
 
 #### Explanation
