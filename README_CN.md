@@ -22,3 +22,6 @@ OpenAI API余额查询(批量)
 
 4、获取反向代理的链接，或者使用自己的 domain 作为反向代理
 
+### 鸣谢
+1、https://github.com/ClarenceDan/openai-billing 
+2、https://github.com/herobrine19/openai-billing
