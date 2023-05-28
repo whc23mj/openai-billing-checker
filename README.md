@@ -20,3 +20,7 @@ Using the apikey to query the balance of the OpenAI billing, which can query a k
 3、After creating, click the quick edit button, copy the code from cloudflare.worker.js in the project, paste it into the editing area, save and deploy.
 
 4、Get the link for reverse proxy, or use your own domain as reverse proxy.
+
+### Thanks
+1、https://github.com/ClarenceDan/openai-billing
+2、https://github.com/herobrine19/openai-billing
