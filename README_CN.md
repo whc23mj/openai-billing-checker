@@ -1,4 +1,7 @@
 # openai-billing-checker（[English](./README.md)）
+
+2022-07-26 subscription 、 usage 接口已无法使用，在线查吧。
+
 OpenAI API余额查询(批量)
 
 使用 apikey 查询 OpenAI apikey 余额，可查询 $120 的key
