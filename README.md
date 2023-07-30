@@ -1,4 +1,7 @@
 # openai-billing-checker（[中文](./README_CN.md)）
+
+## The subscription and usage interfaces will no longer be available after 2023-07-26. Please check online.
+
 OpenAI API Billing Checker (Muti-KEYs)
 
 Using the apikey to query the balance of the OpenAI billing, which can query a key worth $120.
