@@ -1,6 +1,8 @@
 # openai-billing-checker（[中文](./README_CN.md)）
 
-## The subscription and usage interfaces will no longer be available after 2023-07-26. Please check online.
+## The official subscription and usage interfaces of OpenAI will no longer be available starting from July 26, 2023.
+Please check the official website for more information.
+https://platform.openai.com/account/usage
 
 OpenAI API Billing Checker (Muti-KEYs)
 
