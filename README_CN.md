@@ -1,6 +1,7 @@
 # openai-billing-checker（[English](./README.md)）
 
-## 2023-07-26 subscription 、 usage 接口已无法使用，在线查吧。
+## 2023-07-26 OpenAI官方subscription、usage接口已无法使用，去官网在线查吧。
+https://platform.openai.com/account/usage
 
 OpenAI API余额查询(批量)
 
