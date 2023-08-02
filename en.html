@@ -389,7 +389,7 @@ button[type="submit"]:focus {
           // 获取API限额
           let response = await fetch(urlSubscription, {headers});
           if (!response.ok) {
-            console.log("您的账户已被封禁，请登录OpenAI进行查看。");
+            console.log("The account has been suspended. Please log in to OpenAI for further information.");
             return;
           }
           const subscriptionData = await response.json();
@@ -429,7 +429,7 @@ button[type="submit"]:focus {
         let customUrlInput = document.getElementById("custom-url-input");
 
         if (apiKeyInput.value.trim() === "") {
-          alert("请填写API KEY");
+          alert("Please fill in the API KEY.");
           return;
         }
 
@@ -439,7 +439,7 @@ button[type="submit"]:focus {
         let apiUrl = "";
         if (apiUrlSelect.value === "custom") {
           if (customUrlInput.value.trim() === "") {
-            alert("请设置API链接");
+            alert("Please configure the API link.");
             return;
           } else {
             apiUrl = customUrlInput.value.trim();
@@ -478,7 +478,7 @@ button[type="submit"]:focus {
               let errorMessageCell = document.createElement("td");
               errorMessageCell.colSpan = "3";
               errorMessageCell.classList.add("status-error");
-              errorMessageCell.textContent = "不正确或已失效的API-KEY";
+              errorMessageCell.textContent = "Invalid or expired API key.";
               row.appendChild(errorMessageCell);
             } else {
               // TOTAL GRANTED
@@ -531,7 +531,7 @@ button[type="submit"]:focus {
             errorMessageCell.style.width = "90px";
             errorMessageCell.classList.add("status-error");
             errorMessageCell.textContent =
-              "账户已被封禁，请登录OpenAI进行查看。";
+              "The account has been suspended. Please log in to OpenAI for further information.";
             row.appendChild(errorMessageCell);
 
             tableBody.appendChild(row);
@@ -597,7 +597,7 @@ function displayResult(data) {
             </div>
         `;
     } else {
-        alert("您的账户已被封禁，请登录OpenAI进行查看。");
+        alert("The account has been suspended. Please log in to OpenAI for further information.");
     }
 }
 
@@ -605,7 +605,7 @@ function checkOpenAICredit() {
     var apiKey = document.getElementById("api-key-input").value;
 
     if (!apiKey.startsWith("sk-")) {
-        alert("无效的API密钥，请检查您的API密钥是否正确。");
+        alert("Invalid API key, please check if your API key is correct.");
         return;
     }
 
@@ -621,7 +621,7 @@ function checkOpenAICredit() {
         hideLoader();
     })
     .catch(error => {
-        alert("您的账户已被封禁，请登录OpenAI进行查看。");
+        alert("The account has been suspended. Please log in to OpenAI for further information.");
         hideLoader();
     });
 }
@@ -645,7 +645,7 @@ async function checkBilling(apiKey) {
     // 获取API限额
     let response = await fetch(urlSubscription, {headers});
     if (!response.ok) {
-      console.log("您的账户已被封禁，请登录OpenAI进行查看。");
+      console.log("The account has been suspended. Please log in to OpenAI for further information.");
       return;
     }
     const subscriptionData = await response.json();
